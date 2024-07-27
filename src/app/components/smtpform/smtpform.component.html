@@ -1,0 +1,11 @@
+<section class="card smtp-bar">
+  <div class="card-head">
+<p>ВИ МОЖЕТЕ САМІ ОБРАТИ ТКАНИНУ:</p>
+  </div>
+  <div class="card-body">
+<app-textbox [id]="'nameOfUser'" [value] = "dataService.get('nameOfUser')" [title]="lang.get('nameOfUser')!" [hint]="''"></app-textbox>
+<app-textbox [id]="'emailOfUser'" [value] = "dataService.get('emailOfUser')" [title]="lang.get('emailOfUser')!" [hint]="''"></app-textbox>
+<app-textbox [id]="'messagerOfUser'" [value] = " dataService.get('messagerOfUser')" [title]="lang.get('messagerOfUser')!" [hint]="''"></app-textbox>
+    <button class="btn btn-success mybtn" (click)="send()">ЗАМОВИТИ</button>
+  </div>
+</section>

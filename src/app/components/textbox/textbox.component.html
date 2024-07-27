@@ -1,0 +1,10 @@
+<div [formGroup]="form" class="my-box">
+
+  <label class="my-label" *ngIf="title">{{title}}</label>
+  <div class = "input-field">
+  <input [id]="id" type="text" class="form-control my-textfield" [placeholder]="hint"
+         (input)="onValueChange($event)"  formControlName="title_control"
+  >
+  </div>
+  <label *ngIf=" title_control.errors && title_control.touched" class="text-bg-danger">ERROR</label>
+</div>
